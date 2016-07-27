@@ -9,6 +9,7 @@ module.exports = function(){
 
 	//Midleware
 	app.use(express.static('./public'));
+	home(app);
 
 	//Definindo views engines
 	app.set('view engine', 'ejs');
@@ -17,7 +18,7 @@ module.exports = function(){
 	//Necessário apenas na versão 3.x
 	app.use(app.router);
 
-	home(app);
+
 
 	return app;
 }
